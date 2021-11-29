@@ -6,7 +6,11 @@ El proyecto maneja la información de los usuarios de un banco y mediante estruc
 
 ### - Usa un algoritomo de hashing adecuado para resolver un problema
 
-Para el proyecto implemtenté una clase para crear una tabla hash, de manera que el string que recibe la función *put* es la contraseña del usuario y el int es la cantidad de dinero que el usuario almacena en su cuenta. A continuación se muestra la complejidad temporal de las funciones de la tabla hash:
+Para el proyecto implemtenté una clase para crear una tabla hash, de manera que el string que recibe la función *put* es la contraseña del usuario y el int es la cantidad de dinero que el usuario almacena en su cuenta. 
+
+La función *get* realiza una búsqueda en la tabla hash, y devuelve el dinero dentro de la cuenta en base a la contraseña recibida como parámetro.
+
+A continuación se muestra la complejidad temporal de las funciones de la tabla hash:
 
 ***put***
 
