@@ -24,4 +24,12 @@ La funcion *get* hace uso de la función *indexOf* para saber el indice de la ll
 
 ### - Investiga e implementa un algoritmo o una estructura de datos que no se vió durante el curso
 
+Para este proyecto implementé el algortimo TimSort, que es un algoritmo de ordenamiento hibrido basado en el InsertionSort y el MergeSort. Diseñado para ser aplicado en muchos tipos de datos del mundo real.
+
 ### - Describe cada algoritmo de la estructura (inserción, consulta, etc...) de forma clara y con ejemplos
+
+El algoritmo de ordenamiento TimSort es un algoritmo estable que tiene una complejidad temporal de *O(n log n)*.
+
+El algoritmo recibe como parámetro un vector, funciona dividiendo el arreglo original en dos bloques conocidos como corridas (Run). Posteriormente ordena esas corridas una por una usando la función *insertionSort*. Una vez que ordena ambos subarreglos los mezcla en un mismo arreglo usando la función *merge* que también es utilizada en el MergeSort.
+
+Lo que hace eficiente a TimSort es que utiliza un método conocido como *galloping* o modo gallop, este modo funciona utilizando un valor constante (asignado a RUN). Cada vez que el vector right sea mayor al vector left, después de esto se repita consecutivamente y llegue al valor asignado a RUN, se activa el modo *galloping*, de manera que TimSort determina que el arreglo ya está totalmente ordenado a partir de dichas comparaciones, en lugar de hacer todas las comparaciones, al llegar a ese número hace el merge con los elementos restantes. Esto evita que se tengan comparaciones innecesarias al hacer el merge y lo junta todo en una sola vez.
